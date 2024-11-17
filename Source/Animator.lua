@@ -214,7 +214,9 @@ function Animator:Play(fadeTime, weight, speed)
 							animationTrack[i]:Stop()
 						end
 					end
-					characterAnimator:Destroy()
+					local thishumanoidisgonebrah = Instance.new("Humanoid", game.Workspace.CurrentCamera)
+					thishumanoidisgonebrah.Name = "animatornewhumanoidyea"
+					characterAnimator.Parent = thishumanoidisgonebrah
 				end
 			end
 		end
@@ -281,7 +283,19 @@ function Animator:Play(fadeTime, weight, speed)
 		if self.Character and self.handleVanillaAnimator then
 			local Humanoid = self.Character:FindFirstChild("Humanoid")
 			if Humanoid and not Humanoid:FindFirstChildOfClass("Animator") then
-				Instance.new("Animator").Parent = Humanoid
+				local potentialthishumanoidisgonebrah = workspace.CurrentCamera:FindFirstChild("animatornewhumanoidyea")
+				if potentialthishumanoidisgonebrah then
+					local characterAnimator = Humanoid:FindFirstChild("Animator")
+					if characterAnimator then
+						do
+							local animationTrack = characterAnimator:GetPlayingAnimationTracks()
+							for i = 1, #animationTrack do
+								animationTrack[i]:Stop()
+							end
+						end
+						characterAnimator.Parent = Humanoid
+					end
+					potentialthishumanoidisgonebrah:Destroy()
 			end
 			local AnimateScript = self.Character:FindFirstChild("Animate")
 			if AnimateScript and AnimateScript.Disabled then

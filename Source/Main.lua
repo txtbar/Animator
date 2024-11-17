@@ -1,4 +1,4 @@
-local pathToGithub = "https://raw.githubusercontent.com/xhayper/Animator/main/Source/"
+local pathToGithub = "https://raw.githubusercontent.com/txtbar/Animator/main/Source/"
 
 local sub = string.sub
 
@@ -41,9 +41,9 @@ getgenv().hookAnimatorFunction = function()
 		end
 		return Animator.new(Object.Parent, ...)
 	end)
-	Utility:sendNotif("Hook Loaded\nby whited#4382", nil, 5)
+	Utility:sendNotif("Hook Loaded", nil, 5)
 end
 
-Utility:sendNotif("Animator API Loaded", nil, 5)
+Utility:sendNotif("Animator Loaded", nil, 5)
 
-return "Nullware my beloved <3"
+return "Hecker4118"

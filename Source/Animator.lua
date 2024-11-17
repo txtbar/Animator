@@ -297,6 +297,7 @@ function Animator:Play(fadeTime, weight, speed)
 						characterAnimator.Parent = Humanoid
 					end
 					potentialthishumanoidisgonebrah:Destroy()
+				end
 			end
 			local AnimateScript = self.Character:FindFirstChild("Animate")
 			if AnimateScript and AnimateScript.Disabled then
